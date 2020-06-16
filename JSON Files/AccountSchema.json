@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema",
+  "title": "JSON Schema for list of accounts",
+  "type": "object",
+  "description": "Main Object",
+  "properties": {
+    "CompanyList": {
+      "type": "array",
+      "description": "Array of the Accounts by user input",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "description": "describes the online account/name"
+          },
+          "Accounts": {
+            "type": "array",
+            "description": "Array of account information a speicific company",
+            "item": {
+              "type": "object",
+              "properties": {
+                "userid": {
+                  "type": "string",
+                  "description": "The user identification for log-in","
+                },
+                "passwords": {
+                  "type": "array",
+                  "item": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "string",
+                        "description": "Users password value"
+                      },
+                      "strengthNum": {
+                        "type": "number",
+                        "minimum": 0,
+                        "exclusiveMaximum": 101,
+                        "description": "Defines how secure the passwprd is"
+                      },
+                      "strengthText": {
+                        "type": "string",
+                        "description": "Defines how secure the passwprd is",
+                        "enum": [
+                          "very weak",
+                          "weak",
+                          "good",
+                          "strong",
+                          "very strong"
+                        ]
+                      },
+                      "LastReset": {
+                        "type": "string",
+                        "description": "Date when the last time it was reseted"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "strengthNum",
+                      "strengthText"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "description": "information related specifically to the password"
+                },
+                "loginUrl": {
+                  "type": "string",
+                  "decription": "Web address of accounts log-in page",
+                  "format": "uri"
+                },
+                "AccountNum": {
+                  "type": "string",
+                  "description": "the acccount number for user online account"
+                }
+              },
+              "required": [
+                "userId",
+                "passwords"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "Description",
+          "Accounts"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

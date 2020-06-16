@@ -1,0 +1,58 @@
+{  
+  "company": [
+    {
+      "accounts": [
+        {
+          "passwords": [
+            {
+              "Value": "tester",
+              "StrengthNum": 18,
+              "StrengthText": "very weak",
+              "LastReset": "2020-05-23"
+            }
+          ],
+          "UserId": "s_friesen",
+          "loginUrl": "https://www.amazon.ca",
+          "AccountNum": "345-222-6142"
+        }
+      ],
+      "description": "Amazon"
+    },
+    {
+      "accounts": [
+        {
+          "passwords": [
+            {
+              "Value": "tester35",
+              "StrengthNum": 49,
+              "StrengthText": "good",
+              "LastReset": "2020-05-23"
+            }
+          ],
+          "UserId": "soniafriesen",
+          "loginUrl": "https://www.netflix.ca",
+          "AccountNum": "345-658-5462"
+        }
+      ],
+      "description": "Netflix"
+    },
+    {
+      "accounts": [
+        {
+          "passwords": [
+            {
+              "Value": "tester17735!",
+              "StrengthNum": 100,
+              "StrengthText": "very strong",
+              "LastReset": "2020-05-23"
+            }
+          ],
+          "UserId": "sfriesen",
+          "loginUrl": "https://www.facebook.com",
+          "AccountNum": "134-725-9761"
+        }
+      ],
+      "description": "Facebook"
+    }
+  ]
+}
